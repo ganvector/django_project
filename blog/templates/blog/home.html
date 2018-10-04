@@ -1,8 +1,17 @@
 {% extends "blog/base.html" %}
 {% block conteudo %}
+
     {% for post in posts %}
-        <h1>{{ post.titulo }}</h1>
-        <p>Por {{ post.autor }} em {{ post.data_postagem }}</p>
-        <p>{{ post.conteudo }}</p>
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ post.autor }}</a>
+                    <small class="text-muted">{{ post.data_postagem }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ post.titulo }}</a></h2>
+                <p class="article-content">{{ post.conteudo }}</p>
+            </div>
+        </article>
     {% endfor %}
+
 {% endblock conteudo %}
