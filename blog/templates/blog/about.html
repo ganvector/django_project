@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+
+    {% if titulo %}
+        <title>Django Blog - {{ titulo }}</title>
+    {% else %}
+        <title>Django Blog</title>
+    {% endif %}
+
 </head>
 <body>
     <h1>Blog About!</h1>
