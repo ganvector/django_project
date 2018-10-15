@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from.formulario import UserRegisterForm
 
 def registro(request):
@@ -14,5 +15,6 @@ def registro(request):
         formulario = UserRegisterForm()
     return render(request, 'users/registro.html', {'form': formulario})
 
+@login_required
 def profile(request):
     return render(request, 'users/profile.html')
