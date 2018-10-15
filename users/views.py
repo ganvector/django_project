@@ -13,3 +13,6 @@ def registro(request):
     else:
         formulario = UserRegisterForm()
     return render(request, 'users/registro.html', {'form': formulario})
+
+def profile():
+    return render(request, 'users/profile.html')
