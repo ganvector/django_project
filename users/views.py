@@ -14,5 +14,5 @@ def registro(request):
         formulario = UserRegisterForm()
     return render(request, 'users/registro.html', {'form': formulario})
 
-def profile():
+def profile(request):
     return render(request, 'users/profile.html')
